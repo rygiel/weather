@@ -2,28 +2,18 @@
     <head>
         <title>Weather</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
         <link href="styles/index.css" rel="stylesheet" type="text/css">
         <script src="js/index.js"></script>
     </head>
     <body>
-            
-        <div class="weather">
-            <div class="city">Łódź</div>
-            <div>Temperatura: 25 <sup>o</sup>C</div>
-            <div>Sunny</div>
+        <div id="app">
+            <div class="weather" v-for='row in weather' :key='row.id' v-on:click='redirect(row.link)' v-if='renderPage'>
+                <div class="city">{{row.city}}</div>
+                <div>Temperatura: {{row.temp}} <sup>o</sup>C</div>
+                <div>{{row.text}}</div>
+            </div>
         </div>
-
-        <div class="weather">
-            <div class="city">Warszawa</div>
-            <div>Temperatura: 25 <sup>o</sup>C</div>
-            <div>Sunny</div>
-        </div>
-
-        <div class="weather">
-            <div class="city">London</div>
-            <div>Temperatura: 25 <sup>o</sup>C</div>
-            <div>Cloudy</div>
-        </div>
-        
     </body>
 </html>

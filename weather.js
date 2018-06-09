@@ -24,6 +24,7 @@ fetch = (places) => {
                 var condition = data.query.results.channel.item.condition;
                 place.temp =  Math.ceil((condition.temp-32)/1.8);
                 place.text = condition.text;
+                place.link = data.query.results.channel.item.link.split('*')[1];
                 observer.next(place);
                 i++;
                 if (i === places.length) {

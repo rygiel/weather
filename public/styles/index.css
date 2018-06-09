@@ -1,12 +1,17 @@
 body {
-    display: flex;
     margin: 0;
     padding: 0;
+    background: #e2e1e0;
+    font-family:  Roboto, sans-serif;
+}
+
+
+#app {
+    display: flex;
     justify-content: center;
     align-items: center;
     align-content: space-between;
-    background: #e2e1e0;
-    font-family:  Roboto, sans-serif;
+    height: 100vh;
 }
 
 .weather {
