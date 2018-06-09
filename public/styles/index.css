@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    background: #e2e1e0;
+    font-family:  Roboto, sans-serif;
+}
+
+.weather {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    padding: 60px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
+}
+
+.weather .city {
+    font-weight: bold;
+    margin-bottom: 24px;
+}
